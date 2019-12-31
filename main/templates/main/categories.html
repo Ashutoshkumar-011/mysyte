@@ -1,0 +1,35 @@
+
+{% extends 'main/header.html' %}
+
+{% block content %}
+<section id="portfolio" class="clearfix">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3 class="section-title">Our Programming tutorial</h3>
+          </header>
+
+<div class="row">
+
+{% for cat in categories  %}
+
+
+<div class="col-md-2">
+        <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+            <a href="{{cat.category_slug}}" target="_blank">
+                <img src="/static/img/{{cat.image_cat}}.jpg" alt="">
+                <h6 class="text-center">{{cat.tutorial_category}}</h6>
+                <h6 class="text-center">{{cat.category_summary}}</h6>
+            </a>
+            
+
+        </div>
+    </div>
+
+  {% endfor %}
+
+</div>
+
+</div>
+</section>
+{% endblock %}

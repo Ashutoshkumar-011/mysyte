@@ -1,0 +1,30 @@
+
+{% extends 'main/header.html' %}
+{% block content %}
+
+<div class="row">
+
+
+{% for tut in tutorials %}
+
+<p>{{tut.tutorial_title}}</p>
+<p>{{tut.tutorial_content|safe}}</p>
+<p>{{tut.tutorial_published}}</p>
+<br><br>
+
+{% endfor%}
+
+<div class="col-md-2">
+        <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+            <a href="#" target="_blank">
+                <img src="/static/img/logo.jpg" alt="">
+                <h6 class="text-center">Python</h6>
+            </a>
+            
+
+        </div>
+    </div>
+
+</div>
+<h1>Ashutosh</h1>
+{% endblock %}

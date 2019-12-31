@@ -1,0 +1,71 @@
+
+{% extends 'main/headerr.html' %}
+
+
+
+
+{% block content %}
+
+
+
+<div class="container body-content" Style="margin-top: 100px;">
+        
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                        <div class="pyt" style="height: auto;">
+                            <h4>{{tutorial.tutorial_title}}</h4>
+                            <p>{{tutorial.tutorial_published}}</p>
+                            <p>{{tutorial.tutorial_content|safe}}</p>
+
+                          
+                            <div>
+                                
+                            </div>
+                        </div>
+            </div>
+
+
+            <div class="col-md-3" style="padding-left: 0px;">
+                <div class="pyt" style="height: auto;">
+                    <h4>Basic Python</h4>
+                    <ul class="menu" id="java_technologies" data-href="java_technology_tutorials.htm">
+                        {% for tutorial in sidebar %}
+                        {% if forloop.counter0 == this_tutorial_idx %}
+
+                        <li class="active"><a href="/{{tutorial.tutorial_slug }}">{{ tutorial.tutorial_title }}</a></li>
+
+                        {% else %}
+
+                        <li><a href="/{{tutorial.tutorial_slug }}">{{ tutorial.tutorial_title }}</a></li>
+
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+    
+               
+            </div>
+    
+            <div class="col-md-3" style="padding-left: 0px;">
+                <div class="pyt" style="height: auto;">
+                    <h4></h4>
+    
+                    
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+    
+    
+</div>
+
+
+ {% endblock %} 
