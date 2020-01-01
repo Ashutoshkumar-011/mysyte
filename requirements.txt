@@ -1,4 +1,4 @@
 django==2.1.4
 django-heroku
 gunicorn
-tinymce
+django-tinymce4-lite
