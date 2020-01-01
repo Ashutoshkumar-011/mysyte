@@ -69,7 +69,6 @@ INSTALLED_APPS = [
     'tinymce',
     'django.contrib.sites',
 
-    'django.contrib.admin',
     'mysite',
 
 ]
