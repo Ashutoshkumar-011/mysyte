@@ -1,2 +1,5 @@
 Python==3.6.2
 django==2.1.4
+sqlite3
+django-heroku
+gunicorn
