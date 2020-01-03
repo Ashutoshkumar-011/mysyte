@@ -69,6 +69,10 @@ INSTALLED_APPS = [
     'tinymce',
     'django.contrib.sites',
 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
     'mysite',
 
 ]
