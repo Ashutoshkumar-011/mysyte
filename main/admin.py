@@ -8,7 +8,7 @@ from django.db import models
 
 class TutorialAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("title/date", {'fields' : ["tutorial_title", "tutorial_published"]}),
+        ("title/date", {'fields' : ["tutorial_title", "tutorial_published","page_title"]}),
         ('URL', {'fields': ['tutorial_slug']}),
         ('Series', {'fields': ['tutorial_series']}),
         ("content", {'fields' : ["tutorial_content"]}),
