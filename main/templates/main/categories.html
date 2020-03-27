@@ -17,7 +17,7 @@
 <div class="col-md-2">
         <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
             <a href="{{cat.category_slug}}" target="_blank">
-                <img src="/static/img/{{cat.image_cat}}.jpg" alt="">
+                <img src="{{ cat.image.url }}" alt="">
                 <h6 class="text-center">{{cat.tutorial_category}}</h6>
                 <h6 class="text-center">{{cat.category_summary}}</h6>
             </a>
