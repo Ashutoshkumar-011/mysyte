@@ -7,7 +7,7 @@ class TutorialCategory(models.Model):
     tutorial_category = models.CharField(max_length=200)
     category_summary = models.CharField(max_length=200)
     category_slug = models.CharField(max_length=200, default=1)
-    image_cat              = models.CharField(max_length=20, default='for image')
+    image = models.ImageField(upload_to='img', blank=True)
 
 
     class Meta:
@@ -20,7 +20,7 @@ class TutorialSeries(models.Model):
     tutorial_series = models.CharField(max_length=200)
     tutorial_category = models.ForeignKey(TutorialCategory, default = 1, verbose_name = "Category", on_delete = models.SET_DEFAULT)
     series_summary = models.CharField(max_length=200)
-    image_ser              = models.CharField(max_length=20, default='for image')
+    images = models.ImageField(upload_to='img', blank=True)
 
     class Meta:
         verbose_name_plural = "Series"
@@ -32,6 +32,7 @@ class TutorialSeries(models.Model):
 
 class Tutorial(models.Model):
     tutorial_title = models.CharField(max_length=200)
+    page_title = models.CharField(max_length=200, default=1)
     tutorial_content = models.TextField()
     tutorial_published = models.DateTimeField("date published", default=dt.datetime.now)
     
