@@ -3,4 +3,4 @@ django-heroku
 gunicorn
 django-tinymce4-lite
 django-allauth==0.40
-pillow==5.4.1
+pillow==8.2.0
