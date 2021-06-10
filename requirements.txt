@@ -1,4 +1,4 @@
-django==2.1.4
+django==2.2.24
 django-heroku
 gunicorn
 django-tinymce4-lite
